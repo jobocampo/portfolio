@@ -44,9 +44,6 @@ export default function App() {
           <p>
             © {new Date().getFullYear()} {portfolio.profile.name}
           </p>
-          <p className="footer-sub">
-            Cloud Computing Assignment 1 — Vercel + Render
-          </p>
         </div>
       </footer>
     </>

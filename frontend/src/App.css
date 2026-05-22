@@ -31,12 +31,6 @@
   font-size: 0.9rem;
 }
 
-.footer-sub {
-  margin: 0.35rem 0 0;
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
 .alt-section {
   background: var(--surface);
 }

@@ -6,7 +6,7 @@ module.exports = {
     location: "Makoka, Dar es Salaam, Tanzania",
     education:
       "Bachelor of Science in Data Science — Eastern Africa Statistical Training Centre",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=JobPhilipo",
+    image: "/avatar.svg",
   },
   skills: [
     { name: "Python (Pandas, NumPy)", level: 88, category: "Data Analysis" },
@@ -83,7 +83,7 @@ module.exports = {
     },
   ],
   contact: {
-    email: "jobphilipo@gmail.com",
+    email: "jobocampo641@gmail.com",
     phone: "+255 678 383 262",
     linkedin: "https://linkedin.com/in/jobphilipo",
     github: "https://github.com/jobphilipo",
