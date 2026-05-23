@@ -30,7 +30,7 @@ export default function Profile({ profile }) {
         </div>
         <div className="profile-image-wrap">
           <div className="profile-image-ring" />
-          <img src={profile.image} alt={profile.name} />
+          <img src={"/profile.jpeg"} alt={profile.name} />
         </div>
       </div>
     </section>
