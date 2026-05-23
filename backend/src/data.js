@@ -6,7 +6,7 @@ module.exports = {
     location: "Makoka, Dar es Salaam, Tanzania",
     education:
       "Bachelor of Science in Data Science — Eastern Africa Statistical Training Centre",
-    image: "/avatar.svg",
+    image: "/profile.jpg",
   },
   skills: [
     { name: "Python (Pandas, NumPy)", level: 88, category: "Data Analysis" },

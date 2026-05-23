@@ -6,7 +6,7 @@ export const fallbackPortfolio = {
     location: "Makoka, Dar es Salaam, Tanzania",
     education:
       "Bachelor of Science in Data Science — Eastern Africa Statistical Training Centre",
-    image: "/avatar.svg",
+    image: "/profile.jpeg",
   },
   skills: [
     { name: "Python (Pandas, NumPy)", level: 88, category: "Data Analysis" },

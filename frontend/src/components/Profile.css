@@ -130,7 +130,10 @@
   position: relative;
   z-index: 1;
   width: min(300px, 100%);
+  height: min(380px, 70vw);
   margin-inline: auto;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 20px;
   border: 3px solid transparent;
   background: linear-gradient(var(--bg-2), var(--bg-2)) padding-box,

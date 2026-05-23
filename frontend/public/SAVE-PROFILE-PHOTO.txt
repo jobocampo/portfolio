@@ -1,0 +1,14 @@
+Save your profile photo here as:
+
+  profile.jpg
+
+Full path:
+  C:\Users\USER\portfolio\frontend\public\profile.jpg
+
+Steps:
+1. Right-click the photo you want to use
+2. Save image as → profile.jpg
+3. Save into this folder (frontend\public)
+4. Run git push (see README or chat)
+
+Then redeploy on Vercel.
