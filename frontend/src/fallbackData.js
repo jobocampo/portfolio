@@ -56,7 +56,7 @@ export const fallbackPortfolio = {
       description:
         "Machine learning project analyzing customer behavior to support targeted marketing strategies in the banking sector.",
       tech: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
-      image: "/project-banking.svg",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
       link: "#",
       github: "https://github.com/jobphilipo",
     },
@@ -66,7 +66,7 @@ export const fallbackPortfolio = {
       description:
         "Mapping and calculating buffer zones to assess health facility accessibility using GIS spatial tools.",
       tech: ["QGIS", "Spatial Analysis", "Buffer Zones", "GIS"],
-      image: "/project-gis.svg",
+      image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80",
       link: "#",
       github: "https://github.com/jobphilipo",
     },

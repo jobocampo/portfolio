@@ -1,6 +1,28 @@
 import { useState } from "react";
 import { submitContact } from "../api";
+import SectionHeader from "./SectionHeader";
 import "./Contact.css";
+
+const contactItems = [
+  { key: "email", label: "Email", icon: "✉️", href: (c) => `mailto:${c.email}`, text: (c) => c.email },
+  { key: "phone", label: "Phone", icon: "📱", text: (c) => c.phone },
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    icon: "💼",
+    href: (c) => c.linkedin,
+    text: () => "View profile",
+    external: true,
+  },
+  {
+    key: "github",
+    label: "GitHub",
+    icon: "🐙",
+    href: (c) => c.github,
+    text: () => "Repositories",
+    external: true,
+  },
+];
 
 export default function Contact({ contact }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -30,73 +52,76 @@ export default function Contact({ contact }) {
 
   return (
     <section id="contact" className="section contact">
-      <div className="container contact-grid">
-        <div>
-          <h2 className="section-title">Contact</h2>
-          <p className="section-subtitle">Get in touch — messages are sent to the API.</p>
-          <ul className="contact-info">
-            <li>
-              <strong>Email:</strong>{" "}
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            </li>
-            <li>
-              <strong>Phone:</strong> {contact.phone}
-            </li>
-            <li>
-              <strong>LinkedIn:</strong>{" "}
-              <a href={contact.linkedin} target="_blank" rel="noreferrer">
-                Profile
-              </a>
-            </li>
-            <li>
-              <strong>GitHub:</strong>{" "}
-              <a href={contact.github} target="_blank" rel="noreferrer">
-                Repositories
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div className="container">
+        <SectionHeader
+          title="Contact"
+          subtitle="Reach out — I'd love to connect about data science and opportunities."
+        />
+        <div className="contact-grid">
+          <div className="contact-cards">
+            {contactItems.map((item) => (
+              <div key={item.key} className="contact-card">
+                <span className="contact-card-icon">{item.icon}</span>
+                <div>
+                  <strong>{item.label}</strong>
+                  {item.href ? (
+                    <a
+                      href={item.href(contact)}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noreferrer" : undefined}
+                    >
+                      {item.text(contact)}
+                    </a>
+                  ) : (
+                    <p>{item.text(contact)}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
 
-        <form className="card contact-form" onSubmit={handleSubmit}>
-          <label>
-            Name
-            <input
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              placeholder="Your name"
-            />
-          </label>
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              placeholder="you@email.com"
-            />
-          </label>
-          <label>
-            Message
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              placeholder="Write your message..."
-            />
-          </label>
-          <button type="submit" className="btn" disabled={sending}>
-            {sending ? "Sending..." : "Send Message"}
-          </button>
-          {status.text && (
-            <p className={`form-status ${status.type}`}>{status.text}</p>
-          )}
-        </form>
+          <form className="card contact-form" onSubmit={handleSubmit}>
+            <h3 className="form-title">Send a message</h3>
+            <label>
+              Name
+              <input
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                placeholder="Your name"
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                placeholder="you@email.com"
+              />
+            </label>
+            <label>
+              Message
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                placeholder="Write your message..."
+              />
+            </label>
+            <button type="submit" className="btn" disabled={sending}>
+              {sending ? "Sending..." : "Send Message"}
+            </button>
+            {status.text && (
+              <p className={`form-status ${status.type}`}>{status.text}</p>
+            )}
+          </form>
+        </div>
       </div>
     </section>
   );

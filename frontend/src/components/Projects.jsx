@@ -1,20 +1,26 @@
+import SectionHeader from "./SectionHeader";
 import "./Projects.css";
 
 export default function Projects({ projects }) {
   return (
     <section id="projects" className="section projects">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">
-          Real-world data science and spatial analysis work.
-        </p>
+        <SectionHeader
+          title="Projects"
+          subtitle="Real-world data science and spatial analysis work."
+        />
         <div className="grid project-grid">
-          {projects.map((project) => (
-            <article key={project.id} className="card project-card">
+          {projects.map((project, i) => (
+            <article
+              key={project.id}
+              className="card project-card"
+              style={{ animationDelay: `${i * 0.1}s` }}
+            >
               {project.image && (
                 <div className="project-image-wrap">
                   <img src={project.image} alt={project.title} loading="lazy" />
                   <div className="project-image-overlay" />
+                  <span className="project-badge">Featured</span>
                 </div>
               )}
               <div className="project-body">
@@ -26,14 +32,9 @@ export default function Projects({ projects }) {
                   ))}
                 </ul>
                 <div className="project-links">
-                  <a href={project.github} target="_blank" rel="noreferrer">
+                  <a href={project.github} target="_blank" rel="noreferrer" className="link-btn">
                     GitHub →
                   </a>
-                  {project.link !== "#" && (
-                    <a href={project.link} target="_blank" rel="noreferrer">
-                      Live Demo →
-                    </a>
-                  )}
                 </div>
               </div>
             </article>

@@ -1,14 +1,23 @@
+import SectionHeader from "./SectionHeader";
 import "./Qualifications.css";
+
+const accentColors = ["#38bdf8", "#a78bfa", "#34d399"];
 
 export default function Qualifications({ qualifications }) {
   return (
-    <section id="qualifications" className="section qualifications alt-section">
+    <section id="qualifications" className="section qualifications">
       <div className="container">
-        <h2 className="section-title">Qualifications</h2>
-        <p className="section-subtitle">My academic background and certifications.</p>
+        <SectionHeader
+          title="Qualifications"
+          subtitle="My academic background and professional development."
+        />
         <div className="timeline">
           {qualifications.map((item, index) => (
-            <article key={index} className="card timeline-item">
+            <article
+              key={index}
+              className="card timeline-item"
+              style={{ "--accent-line": accentColors[index % accentColors.length] }}
+            >
               {item.image && (
                 <img
                   className="timeline-icon"
