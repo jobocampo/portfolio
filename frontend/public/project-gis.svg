@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052e16"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#g2)"/>
+  <circle cx="400" cy="200" r="140" fill="none" stroke="#34d399" stroke-width="3" opacity="0.5"/>
+  <circle cx="400" cy="200" r="90" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 6" opacity="0.7"/>
+  <path d="M200 280 Q320 120 400 160 Q480 200 600 140 L650 300 Z" fill="#166534" opacity="0.6"/>
+  <path d="M250 300 Q350 200 450 220 Q550 240 620 200 L680 320 Z" fill="#14532d" opacity="0.8"/>
+  <circle cx="400" cy="200" r="12" fill="#fbbf24"/>
+  <circle cx="320" cy="240" r="8" fill="#38bdf8"/>
+  <circle cx="480" cy="170" r="8" fill="#38bdf8"/>
+  <rect x="80" y="60" width="200" height="100" rx="8" fill="#0f172a" opacity="0.85"/>
+  <line x1="100" y1="90" x2="260" y2="90" stroke="#334155" stroke-width="1"/>
+  <line x1="100" y1="110" x2="260" y2="110" stroke="#334155" stroke-width="1"/>
+  <line x1="100" y1="130" x2="200" y2="130" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="320" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="28" font-weight="700">Spatial GIS Analysis</text>
+  <text x="80" y="355" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="18">Maps · Buffers · Accessibility</text>
+</svg>

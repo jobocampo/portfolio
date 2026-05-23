@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#g1)"/>
+  <rect x="80" y="80" width="280" height="180" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="100" y="110" width="120" height="8" rx="4" fill="#38bdf8"/>
+  <rect x="100" y="130" width="200" height="60" rx="6" fill="#0f172a"/>
+  <polyline points="110,175 140,150 170,160 200,120 230,130 260,100 280,110" fill="none" stroke="#34d399" stroke-width="3"/>
+  <rect x="420" y="100" width="300" height="200" rx="12" fill="#1e293b" opacity="0.9"/>
+  <circle cx="500" cy="180" r="50" fill="none" stroke="#818cf8" stroke-width="12" stroke-dasharray="80 200"/>
+  <circle cx="620" cy="180" r="50" fill="none" stroke="#38bdf8" stroke-width="12" stroke-dasharray="120 200"/>
+  <text x="80" y="320" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="28" font-weight="700">Banking Analytics</text>
+  <text x="80" y="355" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="18">ML · Segmentation · Insights</text>
+</svg>

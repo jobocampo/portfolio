@@ -9,10 +9,20 @@ export default function Qualifications({ qualifications }) {
         <div className="timeline">
           {qualifications.map((item, index) => (
             <article key={index} className="card timeline-item">
-              <span className="timeline-period">{item.period}</span>
-              <h3>{item.degree}</h3>
-              <p className="timeline-institution">{item.institution}</p>
-              <p>{item.description}</p>
+              {item.image && (
+                <img
+                  className="timeline-icon"
+                  src={item.image}
+                  alt=""
+                  loading="lazy"
+                />
+              )}
+              <div className="timeline-content">
+                <span className="timeline-period">{item.period}</span>
+                <h3>{item.degree}</h3>
+                <p className="timeline-institution">{item.institution}</p>
+                <p>{item.description}</p>
+              </div>
             </article>
           ))}
         </div>
