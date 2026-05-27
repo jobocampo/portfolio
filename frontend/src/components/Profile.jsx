@@ -7,7 +7,7 @@ export default function Profile({ profile }) {
       <div className="container profile-grid">
         <div className="profile-text">
           <p className="eyebrow">Personal Profile</p>
-          <h1>{profile.name}</h1>
+          <h1>HEY, MY NAME IS JOB</h1>
           <p className="profile-title">{profile.title}</p>
           <div className="profile-tags">
             <span className="tag tag-cyan">Data Science</span>

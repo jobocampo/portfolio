@@ -1,6 +1,6 @@
 export const fallbackPortfolio = {
   profile: {
-    name: "Job Philipo Ochuma",
+    name: "HEY, MY NAME IS JOB",
     title: "BSc Data Science Student | Aspiring Data Scientist",
     bio: "Pursuing a Bachelor of Science in Data Science at the Eastern Africa Statistical Training Centre. My goal is to apply data-driven insights and machine learning to solve business challenges in the banking and technology sectors.",
     location: "Makoka, Dar es Salaam, Tanzania",
