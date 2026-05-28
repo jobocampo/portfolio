@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { getPortfolio } from "./api";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
@@ -30,22 +31,23 @@ export default function App() {
   }
 
   return (
-    <>
+    <Router>
       <Navbar name={portfolio.profile.name} />
-      <main>
-        <Profile profile={portfolio.profile} />
-        <Skills skills={portfolio.skills} />
-        <Qualifications qualifications={portfolio.qualifications} />
-        <Projects projects={portfolio.projects} />
-        <Contact contact={portfolio.contact} />
-      </main>
+      <Routes>
+        <Route path="/" element={<Profile profile={portfolio.profile} />} />
+        <Route path="/skills" element={<Skills skills={portfolio.skills} />} />
+        <Route
+          path="/qualifications"
+          element={<Qualifications qualifications={portfolio.qualifications} />}
+        />
+        <Route path="/projects" element={<Projects projects={portfolio.projects} />} />
+        <Route path="/contact" element={<Contact contact={portfolio.contact} />} />
+      </Routes>
       <footer className="footer">
         <div className="container">
-          <p>
-            © {new Date().getFullYear()} {portfolio.profile.name}
-          </p>
+          <p>© {new Date().getFullYear()} {portfolio.profile.name}</p>
         </div>
       </footer>
-    </>
+    </Router>
   );
 }

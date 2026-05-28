@@ -1,26 +1,27 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const links = [
-  { href: "#profile", label: "Profile" },
-  { href: "#skills", label: "Skills" },
-  { href: "#qualifications", label: "Qualifications" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { to: "/", label: "Home" },
+  { to: "/skills", label: "Skills" },
+  { to: "/qualifications", label: "Qualifications" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar({ name }) {
   return (
     <header className="navbar">
       <div className="container navbar-inner">
-        <a href="#profile" className="logo">
+        <Link to="/" className="logo">
           {name.split(" ")[0]}
           <span>.</span>
-        </a>
+        </Link>
         <nav>
           <ul className="nav-links">
             {links.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
+              <li key={link.to}>
+                <Link to={link.to}>{link.label}</Link>
               </li>
             ))}
           </ul>
